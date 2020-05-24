@@ -8,6 +8,15 @@
 .btn {
     border: none;
     background-color: transparent;
+    &__title-top {
+        @include borders($grey-border);
+        @include b-radius-05;
+        padding: .6rem 1.5rem;
+        font-size: 1.5rem;
+        @include justSelf(end);
+        grid-column: 1/-1;
+        grid-row: 2/3;
+    }
 }
 .icon-25x25 {
     width: 2.5rem;

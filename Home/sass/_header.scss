@@ -26,6 +26,8 @@
             grid-column: 2/3;
             grid-row: 2/3;
             width: 85%;
+            font-size: 1.3rem;
+            color: $grey-text-light-2;
         }
         justify-items: center;
         &--1 {
@@ -42,5 +44,5 @@
 .main-title {
     font-size: 4.2rem;
     color: $festival-orange;
-    margin-top: 3rem;
+    margin: 3rem 0;
 }
