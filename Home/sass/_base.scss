@@ -1,0 +1,42 @@
+$festival-orange: #E66616;
+$white: #fff;
+$grey-text-light: #545454;
+$grey-white-light: #ebebeb;
+;
+//mixins
+@mixin b-radius-5 {
+    border-radius: 5rem;
+}
+@mixin b-radius-1 {
+    border-radius: 1rem;
+}
+@mixin b-radius-05 {
+    border-radius: .5rem;
+}
+@mixin borders ($color) {
+    border: 1px solid $color;
+}
+//fonts 
+$font-primary:Arial, Helvetica, sans-serif;
+$body-size-10: 1rem;
+$body-size-12: 1.2rem;
+$body-size-14: 1.4rem;
+$body-size-16: 1.6rem;
+$body-size-18: 1.8rem;
+$body-size-22: 2.2rem;
+$body-size-30: 3rem;
+//RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+//
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}

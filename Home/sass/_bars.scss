@@ -1,0 +1,73 @@
+.bar, .bar__blanca, .bar__naranja, .bar__contacto, .bar__blanca--enlaces, .bar__contacto-item, .bar__blanca-item {
+    display: flex;
+    align-items: center;
+}
+a {
+    list-style: none;
+    text-decoration: none;
+}
+.bar {
+    &>*:not(:last-child) {
+        margin-right: 1rem;
+    }
+    padding: .3rem;
+    &__naranja {
+        justify-content: center;
+        background-color: $festival-orange;
+        color: $white;
+        p {
+            font-size: $body-size-14;
+        }
+    }
+    // 
+    &__contacto-item {
+        font-size: $body-size-10;
+        img {
+            margin-right: 1rem;
+        }
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+    &__link-pais {
+        font-size: $body-size-16;
+        padding: .5rem 1rem;
+        background-color: $white;
+        color: $festival-orange;
+        @include b-radius-5;
+    }
+    //
+    //barra blanca
+    &__blanca {
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1rem 0;
+        &--enlances {
+            color: $grey-text-light;
+            max-width: 59rem;
+        }
+        &-item {
+            cursor: pointer;
+            img:not(:last-child) {
+                margin-right: 1rem;
+            }
+            &:not(:last-child) {
+                margin-right: max(1rem, 2rem);
+            }
+            font-size: 1.5rem;
+        }
+        &-link {
+            color: $grey-text-light;
+            transition: all .3s ease-in;
+            @include borders (transparent);
+            padding: 1rem;
+            &:hover:not(&--icon), &:focus {
+                border-radius: 5rem;
+                @include b-radius-5;
+                @include borders ($festival-orange);
+                outline: none;
+            }
+        }
+    }
+    //
+}

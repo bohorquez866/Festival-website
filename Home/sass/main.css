@@ -1,0 +1,252 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.center-position {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+}
+
+.icon-25x25 {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bar, .bar__blanca, .bar__naranja, .bar__contacto, .bar__blanca--enlaces, .bar__contacto-item, .bar__blanca-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.bar {
+  padding: .3rem;
+}
+
+.bar > *:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.bar__naranja {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #E66616;
+  color: #fff;
+}
+
+.bar__naranja p {
+  font-size: 1.4rem;
+}
+
+.bar__contacto-item {
+  font-size: 1rem;
+}
+
+.bar__contacto-item img {
+  margin-right: 1rem;
+}
+
+.bar__contacto-item:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.bar__link-pais {
+  font-size: 1.6rem;
+  padding: .5rem 1rem;
+  background-color: #fff;
+  color: #E66616;
+  border-radius: 5rem;
+}
+
+.bar__blanca {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+}
+
+.bar__blanca--enlances {
+  color: #545454;
+  max-width: 59rem;
+}
+
+.bar__blanca-item {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.bar__blanca-item img:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.bar__blanca-item:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.bar__blanca-link {
+  color: #545454;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  border: 1px solid transparent;
+  padding: 1rem;
+}
+
+.bar__blanca-link:hover:not(.bar__blanca-link--icon), .bar__blanca-link:focus {
+  border-radius: 5rem;
+  border-radius: 5rem;
+  border: 1px solid #E66616;
+  outline: none;
+}
+
+.hero {
+  background-image: url(../../assets/background-header.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 50rem;
+  width: 100%;
+  position: relative;
+}
+
+.hero__searchbox--wrapper {
+  position: absolute;
+  width: 44%;
+  bottom: -4rem;
+}
+
+.hero__searchbox, .hero .btn__hero-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero__searchbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: #ebebeb;
+  padding: 2.75rem 2rem;
+  border-radius: 1rem;
+}
+
+.hero__filter {
+  color: #fff;
+  font-size: .9rem;
+  position: absolute;
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 1rem;
+  -webkit-transform: skew(-30deg);
+          transform: skew(-30deg);
+  border-radius: .5rem;
+  background-color: #E66616;
+  top: -3.8rem;
+  z-index: -1;
+}
+
+.hero__filter > * {
+  -webkit-transform: skew(30deg);
+          transform: skew(30deg);
+}
+
+.hero__filter--1 {
+  left: 3rem;
+}
+
+.hero__filter--2 {
+  left: 33%;
+}
+
+.hero__filter img {
+  margin-right: 1rem;
+}
+
+.hero__input {
+  position: relative;
+  width: 65%;
+  height: 3.5rem;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  color: #545454;
+  border-radius: .5rem;
+  border: 1px solid #E66616;
+}
+
+.hero__input::-webkit-input-placeholder {
+  font-size: 1.2rem;
+  padding-left: -1rem;
+}
+
+.hero__input:-ms-input-placeholder {
+  font-size: 1.2rem;
+  padding-left: -1rem;
+}
+
+.hero__input::-ms-input-placeholder {
+  font-size: 1.2rem;
+  padding-left: -1rem;
+}
+
+.hero__input::placeholder {
+  font-size: 1.2rem;
+  padding-left: -1rem;
+}
+
+.hero .btn__hero-search {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 4.2%;
+  width: 30%;
+  background-color: #E66616;
+  border-radius: 1rem;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.hero .btn__hero-search p {
+  margin-right: 1rem;
+}
+/*# sourceMappingURL=main.css.map */
