@@ -16,6 +16,12 @@ $grey-white-light: #ebebeb;
 @mixin borders ($color) {
     border: 1px solid $color;
 }
+@mixin justSelf($direction) {
+    justify-self: $direction;
+}
+@mixin aligSelf($direction) {
+    align-self: $direction;
+}
 //fonts 
 $font-primary:Arial, Helvetica, sans-serif;
 $body-size-10: 1rem;
@@ -39,4 +45,7 @@ $bp-small: 37.5em; //600px
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+}
+img {
+    max-width: 100%;
 }

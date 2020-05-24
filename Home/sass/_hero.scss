@@ -1,0 +1,79 @@
+.hero {
+    background-image: url(../../assets/background-header.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 50rem;
+    width: 100%;
+    position: relative;
+    //
+    &__searchbox--wrapper {
+        position: absolute;
+        width: 44%;
+        bottom: -4rem;
+    }
+    &__searchbox, .btn__hero-search {
+        display: flex;
+    }
+    &__searchbox {
+        display: flex;
+        width: 100%;
+        background-color: $grey-white-light;
+        padding: 2.75rem 2rem;
+        @include b-radius-1;
+    }
+    //
+    &__filter {
+        color: $white;
+        font-size: .9rem;
+        position: absolute;
+        width: 25%;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        transform: skew(-30deg);
+        @include b-radius-05;
+        background-color: $festival-orange;
+        top: -3.8rem;
+        z-index: -1;
+        &>* {
+            transform: skew(30deg);
+        }
+        &--1 {
+            left: 3rem;
+        }
+        &--2 {
+            left: 33%;
+        }
+        img {
+            margin-right: 1rem;
+        }
+    }
+    //
+    &__input {
+        position: relative;
+        width: 65%;
+        height: 3.5rem;
+        font-size: 1.5rem;
+        padding-left: 1rem;
+        color: $grey-text-light;
+        @include b-radius-05;
+        @include borders($festival-orange);
+        &::placeholder {
+            font-size: 1.2rem;
+            padding-left: -1rem;
+        }
+    }
+    .btn__hero-search {
+        align-items: center;
+        justify-content: center;
+        margin-left: 4.2%;
+        width: (30%);
+        background-color: $festival-orange;
+        @include b-radius-1;
+        color: $white;
+        font-size: 1.4rem;
+        p {
+            margin-right: 1rem;
+        }
+    }
+}
