@@ -2,10 +2,16 @@ $festival-orange: #E66616;
 $white: #fff;
 $grey-text-light: #545454;
 $grey-text-light-2: #7e7b65;
+$grey-text-light-3: #afadad;
+$grey-text-light-4: #5e5e5e;
 $grey-white-light: #ebebeb;
 $title-blue: #4a7f95;
 $grey-border: #8b8b8b;
 //mixins
+@mixin centerMargin($parameter) {
+    margin: $parameter;
+    display: block;
+}
 @mixin b-radius-5 {
     border-radius: 5rem;
 }
@@ -25,9 +31,13 @@ $grey-border: #8b8b8b;
     align-self: $direction;
 }
 @mixin textElipsis($n) {
-    text-overflow: ellipsis;
-    line-clamp: $n;
+    display: -webkit-box;
     -webkit-line-clamp: $n;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+@mixin boxShadow {
+    box-shadow: 2px 4px 10px -6px rgba(0, 0, 0, 0.59);
 }
 //fonts 
 $font-primary:Arial, Helvetica, sans-serif;

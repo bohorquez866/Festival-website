@@ -33,24 +33,44 @@ ul, li, a {
 }
 
 .btn {
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
   border: none;
   background-color: transparent;
+  border-radius: .5rem;
+  font-size: 1.5rem;
+}
+
+.btn:hover {
+  color: #fff;
 }
 
 .btn__title-top {
   border: 1px solid #8b8b8b;
-  border-radius: .5rem;
   padding: .6rem 1.5rem;
-  font-size: 1.5rem;
   -ms-grid-column-align: end;
       justify-self: end;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   grid-column: 1/-1;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+.btn__title-top:hover {
+  background-color: #E66616;
+  border: none;
+}
+
+.btn--orange {
+  background-color: #E66616;
+  margin: 0 auto;
+  display: block;
+  color: #fff;
+  padding: 1rem 3.5rem;
+  margin-top: 2.5rem;
 }
 
 .icon-25x25 {
@@ -488,16 +508,17 @@ html {
 }
 
 .main-content__tops {
-  -ms-grid-columns: (minmax(20rem, 40rem))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 40rem));
+  -ms-grid-columns: (minmax(20rem, 30rem))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
   -ms-grid-rows: max-content (minmax(max-content, max-content))[2];
       grid-template-rows: -webkit-max-content repeat(2, minmax(-webkit-max-content, -webkit-max-content));
       grid-template-rows: max-content repeat(2, minmax(max-content, max-content));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  grid-gap: 2rem;
+  grid-gap: 1%;
   padding: 0 2.5%;
+  margin-bottom: 5rem;
 }
 
 .main-content__tops .top-title {
@@ -522,10 +543,13 @@ html {
       -ms-grid-row-align: center;
       align-self: center;
   max-width: 65%;
+  margin-bottom: 2rem;
 }
 
 .main-content__viaje-top {
   grid-auto-flow: row;
+  -webkit-box-shadow: 2px 4px 10px -6px rgba(0, 0, 0, 0.59);
+          box-shadow: 2px 4px 10px -6px rgba(0, 0, 0, 0.59);
 }
 
 .main-content__viaje-top__body {
@@ -539,9 +563,13 @@ html {
 
 .main-content__viaje-top__item-title {
   font-size: 1.9rem;
-  text-overflow: ellipsis;
-  line-clamp: 2;
+  display: -webkit-box;
   -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  max-height: 4rem;
+  color: #5e5e5e;
 }
 
 .main-content__viaje-top__item-price, .main-content__viaje-top__item-icons, .main-content__viaje-top__item-icons-item {
@@ -554,6 +582,9 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-content__viaje-top__item-price .duracion {
@@ -566,5 +597,54 @@ html {
   -webkit-text-decoration-color: red;
           text-decoration-color: red;
   font-size: 1.4rem;
+  color: #5e5e5e;
+}
+
+.main-content__viaje-top__item-price .precio-actual {
+  color: #f34a4f;
+  font-size: 2.4rem;
+}
+
+.main-content__viaje-top .tiempo-disponible {
+  display: block;
+  font-size: 1.1rem;
+  color: #afadad;
+  margin-bottom: 3rem;
+}
+
+.main-content__viaje-top__item-subtitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #545454;
+}
+
+.main-content__viaje-top__item-text-description {
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.main-content__viaje-top__item-icons {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 1.3rem;
+  color: inherit;
+}
+
+.main-content__viaje-top__item-icons-item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-content__viaje-top__item-icons-item img {
+  margin-right: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

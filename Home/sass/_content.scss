@@ -7,11 +7,14 @@
     width: 100%;
     //Container 
     &__tops {
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 40rem));
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
         grid-template-rows: max-content repeat(2, minmax(max-content, max-content));
         justify-content: center;
-        grid-gap: 2rem;
+        grid-gap: 1%;
         padding: 0 2.5%;
+        margin-bottom: 5rem;
+        //
+        //
         .top-title {
             color: $title-blue;
             font-size: 2.6rem;
@@ -19,6 +22,8 @@
             grid-column: 1/-1;
             grid-row: 1/2;
         }
+        //
+        //
         .top-text {
             font-size: 1.6rem;
             color: $grey-text-light-2;
@@ -27,35 +32,83 @@
             @include justSelf(start);
             @include aligSelf(center);
             max-width: 65%;
+            margin-bottom: 2rem;
         }
     }
     //item
     &__viaje-top {
         grid-auto-flow: row;
+        @include boxShadow;
+        //
         &__body {
             padding: 1.5rem;
         }
+        //
         &__item-img {
             width: 100%;
             max-height: initial;
         }
+        //
         &__item-title {
             font-size: 1.9rem;
             @include textElipsis(2);
+            margin-bottom: 2rem;
+            max-height: 4rem;
+            color: $grey-text-light-4;
         }
+        //
         &__item-price, &__item-icons, &__item-icons-item {
             display: flex;
         }
+        //
         &__item-price {
             justify-content: space-between;
+            align-items: center;
+            //
             .duracion {
                 font-size: 2rem;
                 font-weight: 100;
             }
+            //
             .precio-tachado {
                 text-decoration: line-through;
                 text-decoration-color: red;
                 font-size: 1.4rem;
+                color: $grey-text-light-4;
+            }
+            .precio-actual {
+                color: #f34a4f;
+                font-size: 2.4rem;
+            }
+        }
+        .tiempo-disponible {
+            display: block;
+            font-size: 1.1rem;
+            color: $grey-text-light-3;
+            margin-bottom: 3rem;
+        }
+        &__item-subtitle {
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-style: italic;
+            color: $grey-text-light;
+        }
+        &__item-text-description {
+            font-size: 1.2rem;
+            text-align: justify;
+            line-height: 1.4;
+            @include textElipsis(4);
+            margin-bottom: 3rem;
+        }
+        &__item-icons {
+            justify-content: space-evenly;
+            font-size: 1.3rem;
+            color: inherit;
+            &-item {
+                align-items: center;
+                img {
+                    margin-right: 1rem;
+                }
             }
         }
     }

@@ -6,17 +6,35 @@
     left: 50%;
 }
 .btn {
+    transition: all .3s ease-out;
     border: none;
     background-color: transparent;
+    @include b-radius-05;
+    font-size: 1.5rem;
+    //hover
+    &:hover {
+        color: $white;
+    }
+    //title button Ver mas
     &__title-top {
         @include borders($grey-border);
-        @include b-radius-05;
         padding: .6rem 1.5rem;
-        font-size: 1.5rem;
         @include justSelf(end);
         @include aligSelf(center);
         grid-column: 1/-1;
-        grid-row: 2/3;
+        grid-row: 1/3;
+        &:hover {
+            background-color: $festival-orange;
+            border: none;
+        }
+    }
+    //
+    &--orange {
+        background-color: $festival-orange;
+        @include centerMargin(0 auto);
+        color: $white;
+        padding: 1rem 3.5rem;
+        margin-top: 2.5rem;
     }
 }
 .icon-25x25 {
