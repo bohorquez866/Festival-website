@@ -43,6 +43,7 @@ ul, li, a {
 
 .btn:hover {
   color: #fff;
+  cursor: pointer;
 }
 
 .btn__title-top {
