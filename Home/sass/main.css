@@ -204,13 +204,11 @@ html {
   -webkit-transition: all .3s ease-in;
   transition: all .3s ease-in;
   border: 1px solid transparent;
-  padding: 1rem;
+  border-bottom: 3px solid transparent;
 }
 
 .bar__blanca-link:hover:not(.bar__blanca-link--icon), .bar__blanca-link:focus {
-  border-radius: 5rem;
-  border-radius: 5rem;
-  border: 1px solid #E66616;
+  border-bottom: 3px solid #E66616;
   outline: none;
 }
 
@@ -330,6 +328,7 @@ html {
 
 .hero .btn__hero-search p {
   margin-right: 1rem;
+  letter-spacing: 2px;
 }
 
 .header__features, .header__item {

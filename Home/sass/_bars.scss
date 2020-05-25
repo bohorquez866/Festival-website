@@ -56,11 +56,9 @@
             color: $grey-text-light;
             transition: all .3s ease-in;
             @include borders (transparent);
-            padding: 1rem;
+            border-bottom: 3px solid transparent;
             &:hover:not(&--icon), &:focus {
-                border-radius: 5rem;
-                @include b-radius-5;
-                @include borders ($festival-orange);
+                border-bottom: 3px solid $festival-orange;
                 outline: none;
             }
         }
