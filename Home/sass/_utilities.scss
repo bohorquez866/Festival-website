@@ -14,6 +14,7 @@
         padding: .6rem 1.5rem;
         font-size: 1.5rem;
         @include justSelf(end);
+        @include aligSelf(center);
         grid-column: 1/-1;
         grid-row: 2/3;
     }
@@ -24,4 +25,5 @@
 }
 .center-text {
     text-align: center;
+    width: 100%;
 }

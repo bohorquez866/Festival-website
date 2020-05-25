@@ -9,10 +9,17 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 62.5%;
+  font-family: 'Arial' Arial, Helvetica, sans-serif;
 }
 
 img {
   max-width: 100%;
+  max-height: 100%;
+}
+
+ul, li, a {
+  list-style: none;
+  text-decoration: none;
 }
 
 .fw-700, .main-content__tops .top-title {
@@ -37,6 +44,9 @@ img {
   font-size: 1.5rem;
   -ms-grid-column-align: end;
       justify-self: end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   grid-column: 1/-1;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
@@ -50,6 +60,7 @@ img {
 
 .center-text, .navbar__picture-link p {
   text-align: center;
+  width: 100%;
 }
 
 html {
@@ -63,11 +74,6 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-a {
-  list-style: none;
-  text-decoration: none;
 }
 
 .bar {
@@ -478,21 +484,29 @@ a {
 .main-content {
   grid-auto-flow: column;
   margin-top: 5rem;
+  width: 100%;
 }
 
 .main-content__tops {
-  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  -ms-grid-rows: max-content (minmax(min-content, max-content))[2];
-      grid-template-rows: -webkit-max-content repeat(2, minmax(-webkit-min-content, -webkit-max-content));
-      grid-template-rows: max-content repeat(2, minmax(min-content, max-content));
-  grid-row-gap: 2rem;
-  max-width: 90%;
+  -ms-grid-columns: (minmax(20rem, 40rem))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 40rem));
+  -ms-grid-rows: max-content (minmax(max-content, max-content))[2];
+      grid-template-rows: -webkit-max-content repeat(2, minmax(-webkit-max-content, -webkit-max-content));
+      grid-template-rows: max-content repeat(2, minmax(max-content, max-content));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 2rem;
+  padding: 0 2.5%;
 }
 
 .main-content__tops .top-title {
   color: #4a7f95;
   font-size: 2.6rem;
+  grid-column: 1/-1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
 }
 
 .main-content__tops .top-text {
@@ -511,8 +525,46 @@ a {
 }
 
 .main-content__viaje-top {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3/4;
+  grid-auto-flow: row;
+}
+
+.main-content__viaje-top__body {
+  padding: 1.5rem;
+}
+
+.main-content__viaje-top__item-img {
+  width: 100%;
+  max-height: initial;
+}
+
+.main-content__viaje-top__item-title {
+  font-size: 1.9rem;
+  text-overflow: ellipsis;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+}
+
+.main-content__viaje-top__item-price, .main-content__viaje-top__item-icons, .main-content__viaje-top__item-icons-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-content__viaje-top__item-price {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-content__viaje-top__item-price .duracion {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.main-content__viaje-top__item-price .precio-tachado {
+  text-decoration: line-through;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
+  font-size: 1.4rem;
 }
 /*# sourceMappingURL=main.css.map */

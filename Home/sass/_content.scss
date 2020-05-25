@@ -4,17 +4,20 @@
 .main-content {
     grid-auto-flow: column;
     margin-top: 5rem;
-    ;
-    //@extend
+    width: 100%;
+    //Container 
     &__tops {
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        grid-template-rows: max-content repeat(2, minmax(min-content, max-content));
-        grid-row-gap: 2rem;
-        max-width: 90%;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 40rem));
+        grid-template-rows: max-content repeat(2, minmax(max-content, max-content));
+        justify-content: center;
+        grid-gap: 2rem;
+        padding: 0 2.5%;
         .top-title {
             color: $title-blue;
             font-size: 2.6rem;
             @extend .fw-700;
+            grid-column: 1/-1;
+            grid-row: 1/2;
         }
         .top-text {
             font-size: 1.6rem;
@@ -26,7 +29,34 @@
             max-width: 65%;
         }
     }
+    //item
     &__viaje-top {
-        grid-row: 3/4;
+        grid-auto-flow: row;
+        &__body {
+            padding: 1.5rem;
+        }
+        &__item-img {
+            width: 100%;
+            max-height: initial;
+        }
+        &__item-title {
+            font-size: 1.9rem;
+            @include textElipsis(2);
+        }
+        &__item-price, &__item-icons, &__item-icons-item {
+            display: flex;
+        }
+        &__item-price {
+            justify-content: space-between;
+            .duracion {
+                font-size: 2rem;
+                font-weight: 100;
+            }
+            .precio-tachado {
+                text-decoration: line-through;
+                text-decoration-color: red;
+                font-size: 1.4rem;
+            }
+        }
     }
 }
