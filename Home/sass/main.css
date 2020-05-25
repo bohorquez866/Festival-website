@@ -61,7 +61,7 @@ ul, li, a {
 
 .btn__title-top:hover {
   background-color: #E66616;
-  border: none;
+  border: 1px solid #E66616;
 }
 
 .btn--orange {
@@ -73,9 +73,29 @@ ul, li, a {
   margin-top: 2.5rem;
 }
 
+.btn--orange:hover {
+  background-color: #2CA1D7;
+}
+
+.btn--orange-nofill {
+  border: 1px solid #E66616;
+  padding: .6rem 2rem;
+  color: #E66616;
+}
+
+.btn--orange-nofill:hover {
+  background-color: #2CA1D7;
+  border: 1px solid #2CA1D7;
+}
+
 .icon-25x25 {
   width: 2.5rem;
   height: 2.5rem;
+}
+
+.icon-30x30 {
+  width: 3rem;
+  height: 3rem;
 }
 
 .center-text, .navbar__picture-link p {
@@ -502,7 +522,6 @@ html {
 }
 
 .main-content {
-  grid-auto-flow: column;
   margin-top: 5rem;
   width: 100%;
 }
@@ -550,6 +569,8 @@ html {
   grid-auto-flow: row;
   -webkit-box-shadow: 2px 4px 10px -6px rgba(0, 0, 0, 0.59);
           box-shadow: 2px 4px 10px -6px rgba(0, 0, 0, 0.59);
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .main-content__viaje-top__body {
@@ -646,5 +667,105 @@ html {
 
 .main-content__viaje-top__item-icons-item img {
   margin-right: 1rem;
+}
+
+.viaje-continente__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #E66616;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  padding: 1rem .2rem;
+  border-radius: .5rem;
+}
+
+.viaje-continente__icon-item {
+  display: block;
+}
+
+.viaje-continente__img {
+  display: block;
+  position: relative;
+  color: #fff;
+  height: 35.1rem;
+  width: 30rem;
+}
+
+.viaje-continente__img-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 1rem;
+  font-size: 2.4rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(#272626), to(#a0181800));
+  background: linear-gradient(0deg, #272626, #a0181800);
+}
+
+.viaje-continente__img-title span {
+  font-weight: normal;
+}
+
+.viaje-continente__body-wrapper {
+  padding: 2rem 1rem;
+}
+
+.viaje-continente__title {
+  font-size: 1.9rem;
+  color: #5e5e5e;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+
+.viaje-continente__precio-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.viaje-continente__precio-wrapper button {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.viaje-continente__precio {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.viaje-continente__precio * {
+  display: block;
+}
+
+.viaje-continente__precio span:first-of-type, .viaje-continente__precio strong {
+  color: #E66616;
+}
+
+.viaje-continente__precio span:first-of-type {
+  font-size: 1.2rem;
+}
+
+.viaje-continente__precio strong {
+  font-size: 2.6rem;
+  padding-left: .5rem;
 }
 /*# sourceMappingURL=main.css.map */
