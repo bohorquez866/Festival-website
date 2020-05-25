@@ -22,6 +22,10 @@ ul, li, a {
   text-decoration: none;
 }
 
+a {
+  color: inherit;
+}
+
 .fw-700, .main-content__tops .top-title {
   font-weight: 700;
 }
@@ -102,6 +106,16 @@ ul, li, a {
 .center-text, .navbar__picture-link p {
   text-align: center;
   width: 100%;
+}
+
+::-moz-selection {
+  background-color: #E66616;
+  color: #fff;
+}
+
+::selection {
+  background-color: #E66616;
+  color: #fff;
 }
 
 html {
@@ -402,9 +416,9 @@ html {
   display: grid;
   -ms-grid-columns: 22% 28% (14.75%)[2] 20.5%;
       grid-template-columns: 22% 28% repeat(2, 14.75%) 20.5%;
-  -ms-grid-rows: (minmax(6rem, max-content))[8];
-      grid-template-rows: repeat(8, minmax(6rem, -webkit-max-content));
-      grid-template-rows: repeat(8, minmax(6rem, max-content));
+  -ms-grid-rows: (minmax(7rem, max-content))[8];
+      grid-template-rows: repeat(8, minmax(7rem, -webkit-max-content));
+      grid-template-rows: repeat(8, minmax(7rem, max-content));
 }
 
 .navbar__picture-link {
@@ -768,5 +782,122 @@ html {
 .viaje-continente__precio strong {
   font-size: 2.6rem;
   padding-left: .5rem;
+}
+
+.footer, .footer__lists {
+  display: -ms-grid;
+  display: grid;
+}
+
+.footer {
+  color: #fff;
+  background-color: #7e7b65;
+  -ms-grid-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 5fr 1fr;
+  -ms-grid-rows: max-content minmax(min-content, max-content);
+      grid-template-rows: -webkit-max-content minmax(-webkit-min-content, -webkit-max-content);
+      grid-template-rows: max-content minmax(min-content, max-content);
+}
+
+.footer__title {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 3px;
+  padding-top: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.footer__lists {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-columns: (minmax(min-content, 10rem))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(-webkit-min-content, 10rem));
+      grid-template-columns: repeat(auto-fill, minmax(min-content, 10rem));
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-row-gap: 3rem;
+  grid-column-gap: .75rem;
+}
+
+.footer__list {
+  grid-column-gap: 2%;
+  text-align: center;
+}
+
+.footer__item {
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 1.5;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.footer__item:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #e4b170;
+  font-weight: 700;
+}
+
+.footer__item-title {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.footer__redes {
+  margin-top: 4rem;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  text-align: center;
+}
+
+.footer__redes--description {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.footer__redes a {
+  margin-bottom: 2rem;
+  display: inline-block;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  border: 1px solid transparent;
+}
+
+.footer__redes a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.footer__redes a:hover {
+  border: 1px solid #e4b170;
+  border-radius: 1rem;
+}
+
+.footer__redes a img {
+  max-height: inherit;
+  padding: 1rem;
+}
+
+.footer__redes p:last-child {
+  font-size: 1.6rem;
+  margin-bottom: 5rem;
 }
 /*# sourceMappingURL=main.css.map */

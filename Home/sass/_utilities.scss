@@ -63,3 +63,7 @@
     text-align: center;
     width: 100%;
 }
+::selection {
+    background-color: $festival-orange;
+    color: $white;
+}

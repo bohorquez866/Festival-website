@@ -1,7 +1,7 @@
 .navbar {
     display: grid;
     grid-template-columns: 22% 28% repeat(2, 14.75%) 20.5%;
-    grid-template-rows: repeat(8, minmax(6rem, max-content));
+    grid-template-rows: repeat(8, minmax(7rem, max-content));
     &__picture-link {
         position: relative;
         div {

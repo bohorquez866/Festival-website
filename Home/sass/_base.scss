@@ -1,9 +1,11 @@
 $festival-orange: #E66616;
+$footer-salmon: #e4b170;
 $white: #fff;
 $grey-text-light: #545454;
 $grey-text-light-2: #7e7b65;
 $grey-text-light-3: #afadad;
 $grey-text-light-4: #5e5e5e;
+$grey-footer: #7e7b65;
 $grey-white-light: #ebebeb;
 $grey-border: #8b8b8b;
 $title-blue: #4a7f95;
@@ -72,4 +74,7 @@ img {
 ul, li, a {
     list-style: none;
     text-decoration: none;
+}
+a {
+    color: inherit;
 }
