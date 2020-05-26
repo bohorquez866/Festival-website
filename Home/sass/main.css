@@ -36,6 +36,19 @@ a {
   left: 50%;
 }
 
+.center-positionY {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+}
+
+.center-positionXY {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
 .btn {
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
@@ -93,6 +106,11 @@ a {
   border: 1px solid #2CA1D7;
 }
 
+.icon-20x20 {
+  width: 2rem;
+  height: 2rem;
+}
+
 .icon-25x25 {
   width: 2.5rem;
   height: 2.5rem;
@@ -116,6 +134,73 @@ a {
 ::selection {
   background-color: #E66616;
   color: #fff;
+}
+
+.burger-menu {
+  display: none;
+  position: relative;
+  width: 3rem;
+  height: 1rem;
+  color: #545454;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  background-color: #545454;
+  width: 3rem;
+  height: 4px;
+}
+
+.burger-menu span, .burger-menu span::before, .burger-menu span::after {
+  position: absolute;
+  width: 4rem;
+  height: .5rem;
+  background-color: #545454;
+}
+
+.burger-menu span::before, .burger-menu span::after {
+  content: "";
+  left: 0;
+}
+
+.burger-menu span::before {
+  top: -1rem;
+}
+
+.burger-menu span::after {
+  top: 1rem;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .burger-menu {
+    display: block;
+  }
+}
+
+.rotate-burger-menu {
+  background-color: #fff !important;
+}
+
+.rotate-burger-menu::before, .rotate-burger-menu::after {
+  content: "";
+  left: 0;
+  background-color: #545454 !important;
+}
+
+.rotate-burger-menu::before {
+  top: -1rem;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  -webkit-transform-origin: 50% 180%;
+          transform-origin: 50% 180%;
+}
+
+.rotate-burger-menu::after {
+  top: 1rem;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  -webkit-transform-origin: 50% -50%;
+          transform-origin: 50% -50%;
 }
 
 html {
@@ -145,6 +230,12 @@ html {
           justify-content: center;
   background-color: #E66616;
   color: #fff;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .bar__naranja {
+    display: none;
+  }
 }
 
 .bar__naranja p {
@@ -181,9 +272,57 @@ html {
   padding: 1rem 0;
 }
 
-.bar__blanca--enlances {
+@media only screen and (max-width: 62.5em) {
+  .bar__blanca {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1.5rem 2rem;
+  }
+}
+
+.bar__blanca-logo {
+  display: block;
+}
+
+.bar__blanca-logo div {
+  display: none;
+}
+
+.bar__blanca-logo img {
+  display: block;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .bar__blanca-logo img {
+    display: none;
+  }
+}
+
+.bar__blanca-logo-responsive {
+  display: none;
+  font-size: 2rem;
+  color: #545454;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .bar__blanca-logo-responsive {
+    display: block;
+  }
+}
+
+.bar__blanca--enlaces {
   color: #545454;
   max-width: 59rem;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .bar__blanca--enlaces {
+    display: none;
+  }
 }
 
 .bar__blanca-item {
@@ -204,7 +343,7 @@ html {
   -webkit-transition: all .3s ease-in;
   transition: all .3s ease-in;
   border: 1px solid transparent;
-  border-bottom: 3px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 
 .bar__blanca-link:hover:not(.bar__blanca-link--icon), .bar__blanca-link:focus {
@@ -219,6 +358,14 @@ html {
   height: 50rem;
   width: 100%;
   position: relative;
+}
+
+.hero__main-title {
+  width: 100%;
+  font-size: 3rem;
+  color: #fff;
+  position: absolute;
+  text-shadow: 3px 1px 4px #544C59;
 }
 
 .hero__searchbox--wrapper {
@@ -546,12 +693,20 @@ html {
   -ms-grid-rows: max-content (minmax(max-content, max-content))[2];
       grid-template-rows: -webkit-max-content repeat(2, minmax(-webkit-max-content, -webkit-max-content));
       grid-template-rows: max-content repeat(2, minmax(max-content, max-content));
+  grid-auto-flow: row dense;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   grid-gap: 1%;
   padding: 0 2.5%;
   margin-bottom: 5rem;
+}
+
+@media only screen and (min-width: 1700px) {
+  .main-content__tops {
+    -ms-grid-columns: (minmax(20rem, 43rem))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 43rem));
+  }
 }
 
 .main-content__tops .top-title {

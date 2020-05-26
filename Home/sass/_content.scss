@@ -8,10 +8,14 @@
     &__tops {
         grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
         grid-template-rows: max-content repeat(2, minmax(max-content, max-content));
+        grid-auto-flow: row dense;
         justify-content: center;
         grid-gap: 1%;
         padding: 0 2.5%;
         margin-bottom: 5rem;
+        @media only screen and (min-width: 1700px) {
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 43rem));
+        }
         //
         //
         .top-title {

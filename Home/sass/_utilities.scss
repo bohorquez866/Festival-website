@@ -5,6 +5,15 @@
     transform: translateX(-50%);
     left: 50%;
 }
+.center-positionY {
+    transform: translateY(-50%);
+    top: 50%;
+}
+.center-positionXY {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
 .btn {
     transition: all .3s ease-out;
     border: none;
@@ -51,6 +60,10 @@
         }
     }
 }
+.icon-20x20 {
+    width: 2rem;
+    height: 2rem;
+}
 .icon-25x25 {
     width: 2.5rem;
     height: 2.5rem;
@@ -67,3 +80,58 @@
     background-color: $festival-orange;
     color: $white;
 }
+.burger-menu {
+    display: none;
+    position: relative;
+    width: 3rem;
+    height: 1rem;
+    color: $grey-text-light;
+    cursor: pointer;
+    span {
+        background-color: $grey-text-light;
+        width: 3rem;
+        height: 4px;
+        //span, before & absolute
+        &, &::before, &::after {
+            position: absolute;
+            width: 4rem;
+            height: .5rem;
+            background-color: $grey-text-light
+        }
+        &::before, &::after {
+            content: "";
+            left: 0;
+        }
+        &::before {
+            top: -1rem;
+        }
+        &::after {
+            top: 1rem;
+        }
+    }
+    //mq
+    @media only screen and (max-width: $bp-large) {
+        display: block;
+    }
+}
+.rotate-burger-menu {
+    background-color: $white!important;
+    &::before, &::after {
+        content: "";
+        left: 0;
+        background-color: $grey-text-light!important;
+    }
+    &::before {
+        top: -1rem;
+        transform: rotate(135deg);
+        transform-origin: 50% 180%;
+    }
+    &::after {
+        top: 1rem;
+        transform: rotate(-135deg);
+        transform-origin: 50% -50%;
+    }
+}
+//@extend
+//@extend
+//@extend
