@@ -10,6 +10,7 @@ $grey-white-light: #ebebeb;
 $grey-border: #8b8b8b;
 $title-blue: #4a7f95;
 $btn-blue: #2CA1D7;
+$dark-blue-text: #272b50;
 //mixins
 @mixin centerMargin($parameter) {
     margin: $parameter;
@@ -71,6 +72,9 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     font-family: 'Arial' Arial, Helvetica, sans-serif;
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 50%;
+    }
 }
 img {
     max-width: 100%;

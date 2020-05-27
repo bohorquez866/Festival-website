@@ -12,9 +12,11 @@
         justify-content: center;
         grid-gap: 1%;
         margin-bottom: 5rem;
+        //media queries
         @media only screen and (min-width: 1700px) {
             grid-template-columns: repeat(auto-fit, minmax(20rem, 43rem));
         }
+        //media queries
         @media only screen and (max-width: $bp-large) {
             grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
             padding-left: 2rem;
@@ -59,10 +61,11 @@
         @media only screen and (max-width: $bp-large) {
             grid-template-columns: repeat(4, 85%);
             grid-template-rows: max-content;
-            overflow-x: auto;
+            overflow-x: hidden;
             overflow-y: hidden;
             grid-gap: 0 2rem;
             justify-content: start;
+            padding-bottom: .5rem;
         }
     }
     //item
