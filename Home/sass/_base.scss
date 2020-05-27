@@ -42,6 +42,11 @@ $btn-blue: #2CA1D7;
 @mixin boxShadow {
     box-shadow: 2px 4px 10px -6px rgba(0, 0, 0, 0.59);
 }
+@mixin hide($res) {
+    @media only screen and (max-width: $res) {
+        display: none;
+    }
+}
 //fonts 
 $font-primary:Arial, Helvetica, sans-serif;
 $body-size-10: 1rem;

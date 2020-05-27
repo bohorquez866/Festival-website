@@ -27,12 +27,16 @@
     }
     //title button Ver mas
     &__title-top {
+        color: $grey-text-light;
         @include borders($grey-border);
         padding: .6rem 1.5rem;
         @include justSelf(end);
         @include aligSelf(center);
         grid-column: 1/-1;
         grid-row: 1/3;
+        @media only screen and (max-width: $bp-large) {
+            margin-right: 1.5rem;
+        }
         &:hover {
             background-color: $festival-orange;
             @include borders($festival-orange);
@@ -133,5 +137,5 @@
     }
 }
 //@extend
-//@extend
-//@extend
+//
+//

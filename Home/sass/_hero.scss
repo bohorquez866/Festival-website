@@ -5,6 +5,9 @@
     height: 50rem;
     width: 100%;
     position: relative;
+    @media only screen and (max-width: $bp-large) {
+        height: 40rem;
+    }
     //
     &__main-title {
         width: 100%;
@@ -18,6 +21,12 @@
         position: absolute;
         width: 44%;
         bottom: -4rem;
+        //media queries
+        @media only screen and (max-width: $bp-large) {
+            bottom: 25%;
+            left: 50%;
+            width: 80%
+        }
     }
     &__searchbox, .btn__hero-search {
         display: flex;
@@ -28,6 +37,10 @@
         background-color: $grey-white-light;
         padding: 2.75rem 2rem;
         @include b-radius-1;
+        @media only screen and (max-width: $bp-large) {
+            padding: 0;
+            background-color: transparent;
+        }
     }
     //
     &__filter {
@@ -55,8 +68,11 @@
         img {
             margin-right: 1rem;
         }
+        @media only screen and (max-width: $bp-large) {
+            display: none;
+        }
     }
-    //
+    //text field
     &__input {
         position: relative;
         width: 65%;
@@ -70,7 +86,11 @@
             font-size: 1.2rem;
             padding-left: -1rem;
         }
+        @media only screen and (max-width: $bp-large) {
+            width: 100%;
+        }
     }
+    //orange search button
     .btn__hero-search {
         align-items: center;
         justify-content: center;
@@ -80,9 +100,34 @@
         @include b-radius-1;
         color: $white;
         font-size: 1.4rem;
+        //icon mag.glass
+        i {
+            display: none;
+        }
+        //media Queries
+        @media only screen and (max-width: $bp-large) {
+            width: auto;
+            padding: 0 1.5rem;
+            margin: 0;
+            i {
+                display: block
+            }
+            img {
+                display: none;
+            }
+        }
+        //
         p {
             margin-right: 1rem;
             letter-spacing: 2px;
+            @media only screen and (max-width: $bp-large) {
+                display: none;
+            }
+        }
+    }
+    &__input, .btn__hero-search {
+        @media only screen and (max-width: $bp-large) {
+            border-radius: 0;
         }
     }
 }

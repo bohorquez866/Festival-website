@@ -2,6 +2,45 @@
     display: grid;
     grid-template-columns: 22% 28% repeat(2, 14.75%) 20.5%;
     grid-template-rows: repeat(8, minmax(7rem, max-content));
+    //media queries
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: repeat(2, 30rem);
+        grid-template-rows: min-content repeat(4, 30rem);
+        justify-content: center;
+        gap: 3rem;
+        //
+        img {
+            height: 30rem;
+            width: 30rem;
+        }
+        //
+        .navbar__title-mobile {
+            grid-row: 1/2;
+            display: block;
+        }
+    }
+    //media queries
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: repeat(2, 15rem);
+        grid-template-rows: min-content repeat(4, 15rem);
+        img {
+            height: 15rem;
+            width: 15rem;
+        }
+    }
+    @media only screen and (max-width: 320px) {
+        grid-template-columns: repeat(2, 10rem);
+        grid-template-rows: min-content repeat(4, 10rem);
+        img {
+            height: 15rem;
+            width: 15rem;
+        }
+    }
+    &__title-mobile {
+        display: none;
+        font-size: 3rem;
+        color: $grey-text-light;
+    }
     &__picture-link {
         position: relative;
         div {
@@ -73,6 +112,40 @@
         &--africa {
             grid-column: 5/6;
             grid-row: 5/-1;
+        }
+        @media only screen and (max-width: $bp-large) {
+            &--asia {
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            &--suramerica {
+                grid-column: 2/3;
+                grid-row: 4/5;
+            }
+            &--europa {
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+            &--centroamerica {
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+            &--usa {
+                grid-column: 2/3;
+                grid-row: 3/4;
+            }
+            &--oceania {
+                grid-column: 1/2;
+                grid-row: 5/6;
+            }
+            &--hoteles {
+                grid-column: 1/2;
+                grid-row: 4/5;
+            }
+            &--africa {
+                grid-column: 2/3;
+                grid-row: 5/6;
+            }
         }
     }
 }
