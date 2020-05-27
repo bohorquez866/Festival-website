@@ -987,7 +987,7 @@ html {
     -ms-grid-rows: max-content;
         grid-template-rows: -webkit-max-content;
         grid-template-rows: max-content;
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: hidden;
     grid-gap: 0 2rem;
     -webkit-box-pack: start;
