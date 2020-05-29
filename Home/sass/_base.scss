@@ -7,6 +7,7 @@ $grey-text-light-3: #afadad;
 $grey-text-light-4: #5e5e5e;
 $grey-footer: #7e7b65;
 $grey-white-light: #ebebeb;
+$grey-white-light-2: #ccc;
 $grey-border: #8b8b8b;
 $title-blue: #4a7f95;
 $btn-blue: #2CA1D7;
@@ -58,17 +59,22 @@ $dark-blue-text: #272b50;
     }
 }
 
+@mixin hideElement() {
+    display: none;
+}
+
 //fonts 
 $font-primary:Arial,
 Helvetica,
 sans-serif;
-$body-size-10: 1rem;
-$body-size-12: 1.2rem;
-$body-size-14: 1.4rem;
-$body-size-16: 1.6rem;
-$body-size-18: 1.8rem;
-$body-size-22: 2.2rem;
-$body-size-30: 3rem;
+$text-size-10: 1rem;
+$text-size-12: 1.2rem;
+$text-size-14: 1.4rem;
+$text-size-16: 1.6rem;
+$text-size-18: 1.8rem;
+$text-size-20: 2rem;
+$text-size-22: 2.2rem;
+$text-size-30: 3rem;
 //RESPONSIVE BREAKPOINTS
 $bp-largest: 75em; //1200px
 $bp-large: 62.5em; //1000px
@@ -87,8 +93,17 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     font-family: 'Arial' Arial, Helvetica, sans-serif;
-    @media only screen and (max-width: $bp-medium) {
+    @media only screen and (max-width: $bp-large) {
         font-size: 50%;
+        *::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+            /* Chrome/Safari/Webkit */
+        }
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE 10+ */
     }
 }
 

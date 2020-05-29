@@ -113,8 +113,9 @@
     }
 }
 
-.footer__redes--link-text {
+a.footer__redes--link-text {
     font-size: 3rem; //24px in mobile
+    display: none;
     @extend .fw-700;
     @media only screen and (max-width: $bp-large) {
         display: inline-block!important;
@@ -144,19 +145,12 @@
         color: $dark-blue-text;
         font-size: 2.1rem;
         padding: 2rem 0 2rem 2rem;
-        border-top: 1px solid $grey-text-light-3;
         cursor: pointer;
-        &:last-of-type {
-            border-bottom: 1px solid $grey-text-light-3;
-        }
+        border-bottom: 1px solid $grey-text-light-3;
         //arrow
         img {
             padding-right: 1rem;
         }
-    }
-    .showable-content {
-        text-align: center;
-        display: none;
     }
     &__inner-content--block:not(:last-of-type) {
         margin-bottom: 2rem;
@@ -179,9 +173,11 @@
         padding-top: 1rem;
     }
 }
-.centro-ayuda{
+
+.centro-ayuda {
     font-size: 2rem;
 }
+
 .footer__title,
 .footer__lists,
 .footer__redes>a,
