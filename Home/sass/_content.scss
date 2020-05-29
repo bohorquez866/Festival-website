@@ -1,6 +1,9 @@
-.main-content, .main-content__tops, .main-content__tops-wrapper {
+.main-content,
+.main-content__tops,
+.main-content__tops-wrapper {
     display: grid;
 }
+
 .main-content {
     margin-top: 5rem;
     width: 100%;
@@ -13,16 +16,15 @@
         grid-gap: 1%;
         margin-bottom: 5rem;
         //media queries
-        @media only screen and (min-width: 1700px) {
-            grid-template-columns: repeat(auto-fit, minmax(20rem, 43rem));
-        }
         //media queries
         @media only screen and (max-width: $bp-large) {
             grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
             padding-left: 2rem;
         }
+        @media only screen and (min-width: 1500px) {
+            grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
+        }
         //
-        //ITEMS WRAPPER
         //
         .top-title {
             color: $title-blue;
@@ -58,6 +60,10 @@
         grid-column: 1/-1;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
         grid-gap: 1%;
+        @media only screen and (min-width: 1500px) {
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            justify-content: center;
+        }
         @media only screen and (max-width: $bp-large) {
             grid-template-columns: repeat(4, 85%);
             grid-template-rows: max-content;
@@ -95,7 +101,9 @@
             color: $grey-text-light-4;
         }
         //
-        &__item-price, &__item-icons, &__item-icons-item {
+        &__item-price,
+        &__item-icons,
+        &__item-icons-item {
             display: flex;
         }
         //
@@ -151,6 +159,7 @@
         }
     }
 }
+
 .viaje-continente {
     &__icon {
         display: flex;
@@ -213,7 +222,8 @@
         & * {
             display: block;
         }
-        span:first-of-type, strong {
+        span:first-of-type,
+        strong {
             color: $festival-orange;
         }
         span:first-of-type {

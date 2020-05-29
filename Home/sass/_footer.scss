@@ -1,6 +1,8 @@
-.footer, .footer__lists {
+.footer,
+.footer__lists {
     display: grid;
 }
+
 //
 .footer {
     color: $white;
@@ -29,7 +31,7 @@
     &__lists {
         grid-column: 2/3;
         grid-row: 2/3;
-        grid-template-columns: repeat(auto-fill, minmax(min-content, 10rem));
+        grid-template-columns: repeat(auto-fill, minmax(min-content, 10%));
         align-items: start;
         grid-row-gap: 3rem;
         grid-column-gap: .75rem;
@@ -92,31 +94,69 @@
                 padding: 1rem;
             }
         }
+        //
         p:last-child {
             font-size: 1.6rem;
             margin-bottom: 5rem;
         }
+        //
+        &--description-mobile {
+            display: none;
+        }
+        //
+        @media only screen and (max-width: $bp-large) {
+            &--description-mobile {
+                font-size: 2.4rem; //20px in mobile
+                display: block;
+            }
+        }
     }
 }
+
+.footer__redes--link-text {
+    font-size: 3rem; //24px in mobile
+    @extend .fw-700;
+    @media only screen and (max-width: $bp-large) {
+        display: inline-block!important;
+        margin: 2rem 0 0 0;
+    }
+}
+
 .footer-responsive {
     display: none;
     color: $grey-text-light;
     @media only screen and (max-width: $bp-large) {
         display: block;
+        line-height: 2;
     }
-    a, strong {
+    a,
+    strong {
         display: block;
     }
     a:not(.footer-responsive__inner-links) {
         font-size: 1.8rem;
     }
+    //clickable title
     &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         color: $dark-blue-text;
         font-size: 2.1rem;
-        padding-left: 2rem;
+        padding: 2rem 0 2rem 2rem;
+        border-top: 1px solid $grey-text-light-3;
+        cursor: pointer;
+        &:last-of-type {
+            border-bottom: 1px solid $grey-text-light-3;
+        }
+        //arrow
+        img {
+            padding-right: 1rem;
+        }
     }
     .showable-content {
         text-align: center;
+        display: none;
     }
     &__inner-content--block:not(:last-of-type) {
         margin-bottom: 2rem;
@@ -124,6 +164,7 @@
     &__inner-title {
         font-size: 2rem;
         font-weight: normal;
+        color: $dark-blue-text;
     }
     &__inner-links {
         font-size: 1.5rem;
@@ -138,7 +179,13 @@
         padding-top: 1rem;
     }
 }
-.footer__title, .footer__lists, .footer__redes>a {
+.centro-ayuda{
+    font-size: 2rem;
+}
+.footer__title,
+.footer__lists,
+.footer__redes>a,
+.footer__redes--description {
     @media only screen and (max-width: $bp-large) {
         display: none;
     }

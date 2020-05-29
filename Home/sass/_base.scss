@@ -16,40 +16,52 @@ $dark-blue-text: #272b50;
     margin: $parameter;
     display: block;
 }
+
 @mixin b-radius-5 {
     border-radius: 5rem;
 }
+
 @mixin b-radius-1 {
     border-radius: 1rem;
 }
+
 @mixin b-radius-05 {
     border-radius: .5rem;
 }
+
 @mixin borders ($color) {
     border: 1px solid $color;
 }
+
 @mixin justSelf($direction) {
     justify-self: $direction;
 }
+
 @mixin aligSelf($direction) {
     align-self: $direction;
 }
+
 @mixin textElipsis($n) {
     display: -webkit-box;
     -webkit-line-clamp: $n;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
 @mixin boxShadow {
     box-shadow: 2px 4px 10px -6px rgba(0, 0, 0, 0.59);
 }
+
 @mixin hide($res) {
     @media only screen and (max-width: $res) {
         display: none;
     }
 }
+
 //fonts 
-$font-primary:Arial, Helvetica, sans-serif;
+$font-primary:Arial,
+Helvetica,
+sans-serif;
 $body-size-10: 1rem;
 $body-size-12: 1.2rem;
 $body-size-14: 1.4rem;
@@ -63,11 +75,14 @@ $bp-large: 62.5em; //1000px
 $bp-medium: 50em; //800px
 $bp-small: 37.5em; //600px
 //
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
 }
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -76,14 +91,20 @@ html {
         font-size: 50%;
     }
 }
+
 img {
     max-width: 100%;
     max-height: 100%;
+    object-fit: cover;
 }
-ul, li, a {
+
+ul,
+li,
+a {
     list-style: none;
     text-decoration: none;
 }
+
 a {
     color: inherit;
 }
