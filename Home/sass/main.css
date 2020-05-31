@@ -344,7 +344,7 @@ html {
 }
 
 .bar__blanca-link:hover:not(.bar__blanca-link--icon), .bar__blanca-link:focus {
-  border-bottom: 3px solid #E66616;
+  border-bottom: 2px solid #E66616;
   outline: none;
 }
 
