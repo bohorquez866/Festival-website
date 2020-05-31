@@ -1,4 +1,7 @@
-@import '../../Home/sass/base';
+@import '../../Home/sass/base'; //General Base
+@import './base'; //Listados Base
 @import '../../Home/sass/utilities';
 @import '../../Home/sass/typography';
 @import './navbar';
+@import './header';
+@import './content';

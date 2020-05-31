@@ -571,6 +571,11 @@ html {
   }
 }
 
+.header {
+  display: -ms-grid;
+  display: grid;
+}
+
 .header__features, .header__item {
   display: -ms-grid;
   display: grid;
@@ -603,7 +608,8 @@ html {
       justify-self: end;
 }
 
-.header__item h4, .header__item p {
+.header__item h4,
+.header__item p {
   -ms-grid-column-align: start;
       justify-self: start;
 }

@@ -1,0 +1,8 @@
+.main {
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: [main-start]repeat(6, 1fr[main-end]);
+    &__aside {
+        grid-column: main-start 1/main-end 1;
+    }
+}

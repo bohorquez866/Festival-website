@@ -47,6 +47,11 @@ a {
   color: inherit;
 }
 
+body {
+  background: url(../../assets/background-listados.png), #ededed;
+  background-size: cover;
+}
+
 .fw-700 {
   font-weight: 700;
 }
@@ -254,6 +259,7 @@ html {
 }
 
 .bar__blanca {
+  background-color: #fff;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -378,5 +384,136 @@ html {
 
 .bar__responsive-item .star {
   color: #E66616;
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  background-color: #fff;
+  padding-bottom: 3rem;
+}
+
+.header__banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  height: 30rem;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../../assets/banner.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/banner.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.header__banner h1 {
+  margin: 0 auto;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.header__banner h1 p {
+  font-size: 1.6rem;
+}
+
+.header__features, .header__item {
+  display: -ms-grid;
+  display: grid;
+}
+
+.header__features {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin-top: 3rem;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .header__features {
+    display: none;
+  }
+}
+
+.header__item {
+  -ms-grid-columns: minmax(min-content, 10rem) 1fr;
+      grid-template-columns: minmax(-webkit-min-content, 10rem) 1fr;
+      grid-template-columns: minmax(min-content, 10rem) 1fr;
+  justify-items: center;
+}
+
+.header__item img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.header__item h4,
+.header__item p {
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.header__item h4 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  font-size: 1.8rem;
+  color: #E66616;
+}
+
+.header__item p {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  width: 85%;
+  font-size: 1.3rem;
+  color: #7e7b65;
+}
+
+.header__item--1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.header__item--2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.header__item--3 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 2rem;
+  -ms-grid-columns: [main-start] (1fr [main-end])[6];
+      grid-template-columns: [main-start] repeat(6, 1fr [main-end]);
+}
+
+.main__aside {
+  grid-column: main-start 1/main-end 1;
 }
 /*# sourceMappingURL=styles.css.map */
