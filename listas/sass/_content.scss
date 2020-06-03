@@ -9,8 +9,8 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(min-content, 30rem));
         justify-content: center;
-        padding: 0 5%;
-        grid-gap: 1%;
+        padding: 0 3%;
+        grid-gap: 2%;
     }
     &__trip--body-wrapper {
         padding: 0 1rem;

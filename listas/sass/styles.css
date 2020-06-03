@@ -828,8 +828,8 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 5%;
-  grid-gap: 1%;
+  padding: 0 3%;
+  grid-gap: 2%;
 }
 
 .main__trip--body-wrapper {
