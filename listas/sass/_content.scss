@@ -2,4 +2,90 @@
     display: grid;
     margin-top: 2rem;
     grid-template-columns: 26rem [main-start]repeat(5, 1fr[main-end]);
+    grid-template-rows: min-content 1fr;
+    &__trips {
+        grid-column: 2/-1;
+        grid-row: 1/-1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 32rem));
+        padding: 0 5%;
+        grid-gap: 1%;
+    }
+    &__trip--body-wrapper {
+        padding: 0 1rem;
+    }
+    &__trip {
+        background-color: $white;
+        color: $grey-text-light;
+        padding-bottom: 3rem;
+        @include b-radius-5;
+        overflow: hidden;
+        max-height: 65rem;
+        &-img {
+            width: 100%;
+        }
+        &-title {
+            font-size: 2rem;
+            margin: 1rem 0 3rem 0;
+        }
+        &-duracion {
+            display: flex;
+            align-items: center;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            img {
+                margin-right: 1rem;
+            }
+        }
+        &-details {
+            display: grid;
+            grid-template-columns: 2.5rem 4fr 2fr;
+            grid-template-rows: 1fr;
+            img {
+                @include justSelf(start);
+                width: 3rem;
+                height: 5.5rem;
+                transform: translateX(-.4rem);
+            }
+            &>span {
+                margin-top: .5rem;
+                font-size: 1.4rem;
+                text-align: center;
+                line-height: 1.5;
+            }
+            &~span {
+                color: $festival-orange;
+                display: block;
+                font-size: 1.2rem;
+                margin-bottom: 3rem;
+            }
+        }
+        &-price {
+            color: $festival-orange;
+            font-size: 1.2rem;
+            line-height: .9;
+            span,
+            strong {
+                display: block;
+            }
+            strong {
+                font-size: 3.2rem;
+            }
+        }
+        &-places {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            p {
+                font-weight: normal;
+            }
+        }
+        &-availability {
+            font-size: 1.2rem;
+            span {
+                display: block;
+                color: $festival-orange;
+            }
+        }
+    }
 }

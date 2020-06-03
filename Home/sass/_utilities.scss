@@ -24,6 +24,7 @@
     background-color: transparent;
     @include b-radius-05;
     font-size: 1.5rem;
+    text-align: center;
     //hover
     &:hover {
         color: $white;
@@ -51,16 +52,18 @@
         background-color: $festival-orange;
         @include centerMargin(0 auto);
         color: $white;
-        padding: 1rem 3.5rem;
+        padding: 1rem;
         margin-top: 2.5rem;
+        width: 50%;
         &:hover {
             background-color: $btn-blue;
         }
     }
     &--orange-nofill {
         @include borders($festival-orange);
-        padding: .6rem 2rem;
+        padding: .6rem 0;
         color: $festival-orange;
+        width: 50%;
         //
         &:hover {
             background-color: $btn-blue;
