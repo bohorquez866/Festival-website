@@ -517,6 +517,7 @@ html {
   grid-row: 1/2;
   background-color: #fff;
   color: #545454;
+  padding-bottom: 2rem;
 }
 
 .main__aside-title {
