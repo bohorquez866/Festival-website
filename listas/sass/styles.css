@@ -772,7 +772,7 @@ html {
 .main__aside__conditions-item-wrapper .check-container input:checked ~ .checkmark:after {
   display: block;
   left: .7rem;
-  top: .4rem;
+  top: .3rem;
   width: .5rem;
   height: .9rem;
   border: solid white;
@@ -822,9 +822,12 @@ html {
   grid-row: 1/-1;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(min-content, 32rem))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(-webkit-min-content, 32rem));
-      grid-template-columns: repeat(auto-fit, minmax(min-content, 32rem));
+  -ms-grid-columns: (minmax(min-content, 30rem))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(-webkit-min-content, 30rem));
+      grid-template-columns: repeat(auto-fit, minmax(min-content, 30rem));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0 5%;
   grid-gap: 1%;
 }
@@ -902,6 +905,17 @@ html {
   color: #E66616;
   font-size: 1.2rem;
   line-height: .9;
+  position: relative;
+}
+
+.main__trip-price::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  left: -1rem;
+  top: -.3rem;
+  width: 2px;
+  background-color: #afadad;
 }
 
 .main__trip-price span,
