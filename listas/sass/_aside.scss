@@ -1,0 +1,228 @@
+.main__aside {
+    grid-column: 1/ 2;
+    background-color: $white;
+    color: $grey-text-light;
+    //
+    &-title {
+        background-color: $festival-orange;
+        padding: 2rem 0;
+        text-align: center;
+        color: $white;
+        font-size: 2rem;
+    }
+    //
+    &-date {
+        margin-top: 5rem;
+        strong {
+            margin-bottom: 4rem;
+        }
+    }
+    &-subtitle {
+        font-size: 1.5rem;
+        display: block;
+    }
+    label {
+        font-size: 1.3rem;
+        display: block;
+        margin-bottom: .5rem;
+    }
+    [id*="salida"] {
+        width: 95%;
+        padding: 1rem 0;
+        @include b-radius-05;
+        border: 1px solid $grey-text-light-3;
+        font-size: 2rem;
+        padding-left: 2rem;
+        &:not(:last-of-type) {
+            margin-bottom: 4rem;
+        }
+        &:last-of-type {
+            margin-bottom: 5rem;
+        }
+    }
+    //duracion
+    &__duracion {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, minmax(min-content, max-content));
+        grid-gap: 1rem;
+        padding-bottom: 2rem;
+        strong {
+            grid-column: 1/-1;
+            grid-row: 1/2;
+            justify-self: start;
+        }
+        &-btn {
+            display: block;
+            padding: 1rem;
+            font-size: 1.2rem;
+            text-align: center;
+            @include justSelf(center);
+            border: 1px solid $grey-text-light-3;
+            height: 6rem;
+            width: 6rem;
+            border-radius: 0;
+            cursor: pointer;
+            transition: all .4 ease-in;
+            &-1 {
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            &-2 {
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+            &-3 {
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+            &:hover {
+                @include b-radius-1;
+                color: inherit;
+            }
+        }
+    }
+    //Rango de precios 
+    &__rango {
+        padding-bottom: 2rem;
+        strong {
+            margin-bottom: 1rem;
+        }
+        .rango-text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        input[type=range] {
+            width: 100%;
+            -webkit-appearance: none;
+            background: linear-gradient(90deg, $festival-orange 0%, darken($festival-orange, 15%) 0%);
+            height: .5rem;
+            width: 100%;
+            @include b-radius-1;
+            cursor: pointer;
+            //
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                height: 1.5rem;
+                width: 1.5rem;
+                border-radius: 3rem;
+                background: $festival-orange;
+                cursor: pointer;
+                margin-top: -.5rem;
+            }
+            //
+            &::-moz-range-thumb {
+                height: 1.5rem;
+                width: 1.5rem;
+                border-radius: 3rem;
+                background: $festival-orange;
+                cursor: pointer;
+                margin-top: -.5rem;
+                outline: none;
+                border: none;
+            }
+            //tracks
+            &::-webkit-slider-runnable-track {
+                height: .5rem;
+                width: 100%;
+                @include b-radius-1;
+                cursor: pointer;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &__conditions {
+        font-size: 1.6rem;
+        &:not(:last-of-type) {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid $grey-text-light-3;
+        }
+        &-title {
+            margin-bottom: 1.7rem;
+            p {
+                font-weight: normal;
+            }
+        }
+    }
+    //container with checkbox (scrollable)
+    &__conditions-item-wrapper {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 15rem;
+        border: 1px solid $grey-text-light-3;
+        //Scrollbar custom for Firefox 
+        scrollbar-color: $festival-orange transparent;
+        scrollbar-width: thin;
+        //scrollbar Custom for Chrome & Safari
+        &::-webkit-scrollbar {
+            width: .8rem;
+            &-track {
+                background: transparent;
+            }
+            &-thumb {
+                background: $festival-orange;
+                &:hover {
+                    background: darken($festival-orange, 15%);
+                }
+            }
+        }
+        //checkboxes
+        .check-container {
+            margin-top: .5rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 1.2rem;
+            cursor: pointer;
+            user-select: none;
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+                &:checked~.checkmark {
+                    background-color: $festival-orange;
+                }
+                //check symbol
+                &:checked~.checkmark:after {
+                    display: block;
+                    left: .7rem;
+                    top: .4rem;
+                    width: .5rem;
+                    height: .9rem;
+                    border: solid white;
+                    border-width: 0 3px 3px 0;
+                    transform: rotate(45deg);
+                }
+            }
+            .checkmark {
+                border-radius: 50%;
+                position: absolute;
+                top: 0;
+                left: .5rem;
+                height: 1.8rem;
+                width: 1.8rem;
+                background-color: lighten($festival-orange, 30%);
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.main__aside-form>* {
+    padding: 0 1.5rem;
+    &:not(:last-of-type) {
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $grey-text-light-3;
+    }
+}

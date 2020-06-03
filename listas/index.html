@@ -82,18 +82,183 @@
 
     <main class="main">
         <aside class="main__aside">
-            <h2 class="main__aside-title">Filtrar 35 resultados</h2>
-            <form action="#" class="main__search-parameters">
-                <strong>Por Fecha de Salida</strong>
+            <h2 class="main__aside-title">Filtrar <span>35 resultados</span></h2>
+            <form action="#" class="main__aside-form">
+
                 <figure class="main__aside-date">
+                    <strong class="main__aside-subtitle">Por Fecha de Salida</strong>
                     <label for="salida-inicial">Salida a partir de:</label>
                     <input type="date" name="salida-inicial" id="salida-inicial">
 
-
-
-                    <label for="salida-maxima">Salida-maxima a partir de:</label>
+                    <label for="salida-maxima">Salida a 
+                         a partir de:</label>
                     <input type="date" name="salida-maxima" id="salida-maxima">
                 </figure>
+
+                <figure class="main__aside__duracion">
+                    <strong class="main__aside-subtitle">Por Duración Del Tour</strong>
+                    <button class="main__aside__duracion-btn btn main__aside__duracion-btn-1">1 a 7 días</button>
+                    <button class="main__aside__duracion-btn btn main__aside__duracion-btn-2">7 a 14 días</button>
+                    <button class="main__aside__duracion-btn btn main__aside__duracion-btn-3">14 a 21 días</button>
+                    <button class="main__aside__duracion-btn btn main__aside__duracion-btn-4">21 a 36 días</button>
+                </figure>
+                <!-- RANGO -->
+                <figure class="main__aside__rango">
+                    <strong class="main__aside-subtitle">Filtro Por Precio</strong>
+                    <label for="#" class="rango-text"><span>min. 0$</span> <strong id="current-value">current</strong> <span>10.000$</span></label>
+                    <input type="range" name="rango-precio" id="rango-precio" min="0" max="10000" value="0">
+                </figure>
+
+                <figure class="main__aside__conditions">
+                    <h3 class="main__aside__conditions-title">Top 10
+                        <p>Los más Recomendados</p>
+                    </h3>
+
+                    <section class="main__aside__conditions-item-wrapper">
+                        <label class="check-container"> <p>Lisboa, Madrid & Barcelona i+</p> 
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Paris y el Mediterraneo</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Asia, Korea Y japon</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Medio Oriente, la tierra de tus sueños</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Israel, la tierra Santa</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Mordor, Tierra del Señor Oscuro</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                    </section>
+                </figure>
+
+                <figure class="main__aside__conditions">
+                    <h3 class="main__aside__conditions-title">Ofertas del mes de marzo</h3>
+
+                    <section class="main__aside__conditions-item-wrapper">
+                        <label class="check-container"> <p>Lisboa, Madrid & Barcelona i+</p> 
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Paris y el Mediterraneo</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Asia, Korea Y japon</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Medio Oriente, la tierra de tus sueños</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Israel, la tierra Santa</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Mordor, Tierra del Señor Oscuro</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                    </section>
+                </figure>
+
+                <figure class="main__aside__conditions">
+                    <h3 class="main__aside__conditions-title">Por estilo de viaje</h3>
+
+                    <section class="main__aside__conditions-item-wrapper">
+                        <label class="check-container"> <p>Lisboa, Madrid & Barcelona i+</p> 
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Paris y el Mediterraneo</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Asia, Korea Y japon</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Medio Oriente, la tierra de tus sueños</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Israel, la tierra Santa</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Mordor, Tierra del Señor Oscuro</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                    </section>
+                </figure>
+                <figure class="main__aside__conditions">
+                    <h3 class="main__aside__conditions-title">Los más pedidos</h3>
+
+                    <section class="main__aside__conditions-item-wrapper">
+                        <label class="check-container"> <p>Lisboa, Madrid & Barcelona i+</p> 
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Paris y el Mediterraneo</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Asia, Korea Y japon</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Medio Oriente, la tierra de tus sueños</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Israel, la tierra Santa</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="check-container"> <p>Mordor, Tierra del Señor Oscuro</p> 
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                    </section>
+                </figure>
+
+
 
             </form>
         </aside>
@@ -102,7 +267,7 @@
 
         </section>
     </main>
-
+    <script src="./script.js"></script>
 </body>
 
 </html>
