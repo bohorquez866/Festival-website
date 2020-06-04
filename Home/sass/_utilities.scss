@@ -70,6 +70,17 @@
             @include borders($btn-blue);
         }
     }
+    &--blue {
+        background-color: $btn-blue;
+        @include centerMargin(0 auto);
+        color: $white;
+        padding: 1rem;
+        margin-top: 2.5rem;
+        width: 50%;
+        &:hover {
+            background-color: $festival-orange;
+        }
+    }
 }
 
 .icon-20x20 {

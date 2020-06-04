@@ -31,7 +31,7 @@
     &__lists {
         grid-column: 2/3;
         grid-row: 2/3;
-        grid-template-columns: repeat(auto-fill, minmax(min-content, 10%));
+        grid-template-columns: repeat(auto-fill, minmax(min-content, 10.3%));
         align-items: start;
         grid-row-gap: 3rem;
         grid-column-gap: .75rem;
@@ -49,7 +49,7 @@
         transition: all .3s ease-in-out;
         cursor: pointer;
         &:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
             color: $footer-salmon;
             font-weight: 700;
         }

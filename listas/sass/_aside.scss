@@ -3,7 +3,7 @@
     grid-row: 1/2;
     background-color: $white;
     color: $grey-text-light;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     //
     &-title {
         background-color: $festival-orange;
@@ -86,7 +86,7 @@
     }
     //Rango de precios 
     &__rango {
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
         strong {
             margin-bottom: 1rem;
         }
@@ -139,7 +139,7 @@
     &__conditions {
         font-size: 1.6rem;
         &:not(:last-of-type) {
-            padding-bottom: 2rem;
+            padding-bottom: 4rem;
             border-bottom: 1px solid $grey-text-light-3;
         }
         &-title {
@@ -224,7 +224,7 @@
 .main__aside-form>* {
     padding: 0 1.5rem;
     &:not(:last-of-type) {
-        padding-bottom: 2rem;
+        padding-bottom: 4rem;
         border-bottom: 1px solid $grey-text-light-3;
     }
 }

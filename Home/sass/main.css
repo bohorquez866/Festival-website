@@ -137,6 +137,20 @@ a {
   border: 1px solid #2CA1D7;
 }
 
+.btn--blue {
+  background-color: #2CA1D7;
+  margin: 0 auto;
+  display: block;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 2.5rem;
+  width: 50%;
+}
+
+.btn--blue:hover {
+  background-color: #E66616;
+}
+
 .icon-20x20 {
   width: 2rem;
   height: 2rem;
@@ -1320,9 +1334,9 @@ html {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
-  -ms-grid-columns: (minmax(min-content, 10%))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(-webkit-min-content, 10%));
-      grid-template-columns: repeat(auto-fill, minmax(min-content, 10%));
+  -ms-grid-columns: (minmax(min-content, 10.3%))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(-webkit-min-content, 10.3%));
+      grid-template-columns: repeat(auto-fill, minmax(min-content, 10.3%));
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
@@ -1345,8 +1359,8 @@ html {
 }
 
 .footer__item:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   color: #e4b170;
   font-weight: 700;
 }
