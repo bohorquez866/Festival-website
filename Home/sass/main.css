@@ -12,6 +12,7 @@ html {
           box-sizing: border-box;
   font-size: 62.5%;
   font-family: 'Arial' Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 @media only screen and (max-width: 62.5em) {
@@ -151,6 +152,22 @@ a {
   background-color: #E66616;
 }
 
+.btn--pink {
+  background-color: #f16776;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+.btn--pink:hover {
+  background-color: #2CA1D7;
+}
+
+.btn--pink-aside {
+  width: 100%;
+  font-size: 3rem;
+  padding: 1.5rem 0;
+}
+
 .icon-20x20 {
   width: 2rem;
   height: 2rem;
@@ -182,6 +199,9 @@ a {
 }
 
 i.menu-burger {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
   font-size: 3rem;
   display: none;
 }
@@ -199,6 +219,10 @@ i.menu-burger {
 
 .show-content {
   display: block;
+}
+
+.border-soft-grey {
+  border: 1px solid #ccc;
 }
 
 .border-top {
@@ -286,12 +310,9 @@ html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     padding: 1.5rem 2rem;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1052,6 +1073,13 @@ html {
 
 @media only screen and (max-width: 50em) {
   .main-content__tops-wrapper {
+    -ms-grid-columns: (50%)[4];
+        grid-template-columns: repeat(4, 50%);
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .main-content__tops-wrapper {
     -ms-grid-columns: (85%)[4];
         grid-template-columns: repeat(4, 85%);
   }
@@ -1141,6 +1169,7 @@ html {
 }
 
 .main-content__viaje-top__item-text-description {
+  height: 5rem;
   font-size: 1.2rem;
   text-align: justify;
   line-height: 1.4;
@@ -1235,6 +1264,18 @@ html {
   margin-bottom: 1.5rem;
 }
 
+@media only screen and (max-width: 50em) {
+  .viaje-continente__title {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .viaje-continente__title {
+    font-size: 2rem;
+  }
+}
+
 .viaje-continente__precio-wrapper {
   display: -ms-grid;
   display: grid;
@@ -1278,9 +1319,33 @@ html {
   font-size: 1.2rem;
 }
 
+@media only screen and (max-width: 50em) {
+  .viaje-continente__precio span {
+    font-size: 2rem !important;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .viaje-continente__precio span {
+    font-size: 1.3rem !important;
+  }
+}
+
 .viaje-continente__precio strong {
   font-size: 2.6rem;
   padding-left: .5rem;
+}
+
+@media only screen and (max-width: 50em) {
+  .viaje-continente__precio strong {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .viaje-continente__precio strong {
+    font-size: 2.6rem;
+  }
 }
 
 .footer,

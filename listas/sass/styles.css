@@ -12,6 +12,7 @@ html {
           box-sizing: border-box;
   font-size: 62.5%;
   font-family: 'Arial' Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 @media only screen and (max-width: 62.5em) {
@@ -156,6 +157,22 @@ body {
   background-color: #E66616;
 }
 
+.btn--pink {
+  background-color: #f16776;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+.btn--pink:hover {
+  background-color: #2CA1D7;
+}
+
+.btn--pink-aside {
+  width: 100%;
+  font-size: 3rem;
+  padding: 1.5rem 0;
+}
+
 .icon-20x20 {
   width: 2rem;
   height: 2rem;
@@ -187,6 +204,9 @@ body {
 }
 
 i.menu-burger {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
   font-size: 3rem;
   display: none;
 }
@@ -204,6 +224,10 @@ i.menu-burger {
 
 .show-content {
   display: block;
+}
+
+.border-soft-grey {
+  border: 1px solid #ccc;
 }
 
 .border-top {

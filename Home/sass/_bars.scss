@@ -48,8 +48,7 @@
                 padding: 1rem 0;
                 @media only screen and (max-width: $bp-large) {
                     display: flex;
-                    justify-content: space-between;
-                    align-items: baseline;
+                    justify-content: flex-start;
                     padding: 1.5rem 2rem;
                     flex-wrap: wrap;
                 }

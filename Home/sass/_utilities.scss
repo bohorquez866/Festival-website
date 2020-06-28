@@ -81,6 +81,19 @@
             background-color: $festival-orange;
         }
     }
+    &--pink {
+        background-color: $pink;
+        color: $white;
+        margin-top: 2rem;
+        &:hover {
+            background-color: $btn-blue;
+        }
+        &-aside {
+            width: 100%;
+            font-size: 3rem;
+            padding: 1.5rem 0;
+        }
+    }
 }
 
 .icon-20x20 {
@@ -109,6 +122,9 @@
 }
 
 i.menu-burger {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     font-size: 3rem;
     display: none;
     @media only screen and (max-width: $bp-large) {
@@ -125,6 +141,10 @@ i.menu-burger {
 //
 .show-content {
     display: block;
+}
+
+.border-soft-grey {
+    border: 1px solid $grey-white-light-2;
 }
 
 .border-top {
